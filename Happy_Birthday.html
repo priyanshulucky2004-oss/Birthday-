@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Happy Birthday</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#ff9ecf,#ffeef7);overflow:hidden}
+.c{max-width:700px;margin:30px auto;background:#ffffffdd;padding:25px;border-radius:20px;text-align:center}
+h1{color:#ff2d75;animation:p 1s infinite alternate} @keyframes p{to{transform:scale(1.05)}}
+.btn{padding:12px 22px;border:none;border-radius:25px;background:#ff2d75;color:#fff;font-size:18px;cursor:pointer}
+.sec{display:none}
+.heart,.balloon{position:fixed;bottom:-50px;animation:up 8s linear infinite}
+.heart::before{content:"❤️";font-size:24px}.balloon::before{content:"🎈";font-size:28px}
+@keyframes up{to{transform:translateY(-120vh);opacity:0}}
+.conf{position:fixed;top:-10px;animation:fall 5s linear infinite}
+.conf::before{content:"✨"} @keyframes fall{to{transform:translateY(120vh)}}
+.cake{font-size:90px;animation:b 1s infinite}@keyframes b{50%{transform:translateY(-8px)}}
+</style></head><body>
+<div class='c'>
+<h1>🎉 Happy Birthday 🎉</h1>
+<p>Wishing you the happiest day ever! 💖</p>
+<button class='btn' onclick="gift.style.display='block';this.style.display='none'">🎁 Open Your Gift</button>
+<div id='gift' class='sec'>
+<div class='cake'>🎂</div>
+<h2>Cake Cutting Time! 🍰</h2>
+<p>Make a wish... ✨</p>
+<button class='btn' onclick="msg.style.display='block';this.style.display='none'">💝 Continue</button>
+</div>
+<div id='msg' class='sec'>
+<p>🚨 <b>Breaking News!</b><br>Aaj ke din duniya ki sabse pyari aur thodi si nakhre wali ladki ka birthday hai. 😌💖</p>
+<p><b>Dear Cutie,</b><br><br>Sabse pehle toh Happy Birthday! 🥳<br>Aaj tum officially ek saal aur badi ho gayi ho... tension mat lo, main kisi ko age nahi bataunga. 🤫😂</p>
+<p>Bas ek promise hai... chahe tum kitna bhi gussa karo, kitna bhi pareshan karo, aur kitni bhi bakbak karo, main phir bhi tumhe hi tang karta rahunga. 😜❤️</p>
+<p>Hamesha aise hi hasta rehna, muskurati rehna, aur meri life ki sabse cute problem bani rehna. 🥹💕</p>
+<h3>❤️ Tumhara pagal</h3>
+</div></div>
+<script>
+gift=document.getElementById('gift');msg=document.getElementById('msg');
+for(let i=0;i<25;i++){let h=document.createElement('div');h.className='heart';h.style.left=Math.random()*100+'vw';h.style.animationDelay=Math.random()*8+'s';document.body.appendChild(h);
+let b=document.createElement('div');b.className='balloon';b.style.left=Math.random()*100+'vw';b.style.animationDelay=Math.random()*8+'s';document.body.appendChild(b);
+let c=document.createElement('div');c.className='conf';c.style.left=Math.random()*100+'vw';c.style.animationDelay=Math.random()*5+'s';document.body.appendChild(c);}
+</script></body></html>
